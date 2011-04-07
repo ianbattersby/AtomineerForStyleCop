@@ -183,11 +183,11 @@
 
 			<If methodType="constructor">
 				<If specialType="static" desc="Static constructor" />
-				<If numArgs="0" desc="Default constructor" />
+				<If numArgs="0" desc="Initializes a new instance of the %containingclass% class" />
 				<If numArgs="1">
-					<If argType1="%containingclass%,%containingclass%#,# %containingclass%,# %containingclass%#" desc="Copy constructor" />
+					<If argType1="%containingclass%,%containingclass%#,# %containingclass%,# %containingclass%#" desc="Initializes a new instance of the %containingclass% class" />
 				</If>
-				<Set desc="Constructor" />
+				<Set desc="Initializes a new instance of the %containingclass% class" />
 			</If>
 
 			<If methodType="destructor" desc="Destructor" />

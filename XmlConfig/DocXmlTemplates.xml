@@ -117,46 +117,54 @@
 		     include-once mechanism to the file.
 
 		<file _filetypes=".h.hpp" _addfooter="true" _separators="false">
-			// file:	%projectpathname%
+			// file: %leafname%%extension%
 			//
-			// summary:	%fileDescription%
+			// summary: %fileDescription%
 
 			#ifndef INC_%leafname%_H
 			#define INC_%leafname%_H
 
 		</file>
 		<filefooter filetypes=".h.hpp" _separators="false">
-			// end of %projectpathname%
+			// end of %leafname%%extension%
 			#endif	// INC_%leafname%_H
 		</filefooter>
 		-->
 
 		<!-- Catch-all plain-text AtomineerUtils headers. See below for other examples -->
 		<file>
-			// file:	%projectpathname%
-			//
-			// summary:	%fileDescription%
+			// --------------------------------------------------------------------------------------------------------------------
+			// &lt;copyright file="%leafname%%extension%" company="%company%"&gt;
+			//   %copyright%
+			// &lt;/copyright&gt;
+			// &lt;summary&gt;
+			//   %fileDescription%
+			// &lt;/summary&gt;
+			// --------------------------------------------------------------------------------------------------------------------
 		</file>
 
 		<file-vb _separators="false">
-			'---------------------------------------------------------------------------------------------------
-			' file:		%projectpathname%
-			'
-			' summary:	%fileDescription%
-			'---------------------------------------------------------------------------------------------------
+			'--------------------------------------------------------------------------------------------------------------------
+			'&lt;copyright file="%leafname%%extension%" company="%company%"&gt;
+			'  %copyright%
+			'&lt;/copyright&gt;
+			'&lt;summary&gt;
+			'  %fileDescription%
+			'&lt;/summary&gt;
+			'--------------------------------------------------------------------------------------------------------------------
 		</file-vb>
 
 		<!-- Free-form text file header example
 		<file>
-			// project:	%project%
-			// file:	%projectpathname%
+			// project: %project%
+			// file: %leafname%%extension%
 			//
-			// summary:	%fileDescription%
+			// summary: %fileDescription%
 			//
-			//			%copyright%
+			// %copyright%
 			//
-			//			Date		Developer		Change
-			//			%date%	%user%	Created
+			// Date		Developer		Change
+			// %date%       %user%                  Created
 		</file>
 		-->
 
@@ -165,7 +173,7 @@
 			 (You will also need to set up the %useremail% user-variable appropriately)
 		<file>
 			// &lt;copyright file="%leafname%%extension%" company="%company%"&gt;
-			// Copyright (c) 2008 All Rights Reserved
+			// Copyright (c) 2011 All Rights Reserved
 			// &lt;/copyright&gt;
 			// &lt;author&gt;%user%&lt;/author&gt;
 			// &lt;email&gt;%useremail%&lt;/email&gt;
@@ -176,7 +184,7 @@
 
 		<!-- XML comment example
 		<file>
-			<prototype>%projectpathname%</prototype>
+			<prototype>%leafname%%extension%</prototype>
 			<_/>
 			<summary/>
 		</file>
@@ -184,12 +192,12 @@
 
 		<!-- Catch-all plain-text file footers. These follow the same form as the file headers above -->
 		<filefooter>
-			// End of %projectpathname%
+			// End of %leafname%%extension%
 		</filefooter>
 
 		<filefooter-vb _separators="false">
 			'---------------------------------------------------------------------------------------------------
-			' End of %projectpathname%
+			' End of %leafname%%extension%
 		</filefooter-vb>
 
 
@@ -202,8 +210,6 @@
 		-->
 		<catchall>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 		</catchall>
 
 		<!--
@@ -213,7 +219,7 @@
 		<namespace>
 			// namespace: %name%
 			//
-			// summary:	%namespaceDescription%
+			// summary: %namespaceDescription%
 		</namespace>
 
 		<!-- Example XML namespace comment.
@@ -227,15 +233,11 @@
 		<typedef>
 			<summary />
 			<_ />
-			<remarks>%user%, %date%</remarks>
-			<_ />
 			<seealso _punctuate="false" _optional="true" />
 		</typedef>
 
 		<enum>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 			<_ />
 			<seealso _punctuate="false" _optional="true" />
 		</enum>
@@ -243,15 +245,11 @@
 		<bitfield>
 			<summary />
 			<_ />
-			<remarks>%user%, %date%</remarks>
-			<_ />
 			<seealso _punctuate="false" _optional="true" />
 		</bitfield>
 
 		<struct>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 			<_ />
 			<example _punctuate="false" _optional="true" />
 			<_ />
@@ -261,10 +259,6 @@
 		<class>
 			<summary />
 			<_ />
-			<remarks>%user%, %date%</remarks>
-			<_ />
-			<param />
-			<_ />
 			<example _punctuate="false" _optional="true" />
 			<_ />
 			<seealso _punctuate="false" _optional="true" />
@@ -272,8 +266,6 @@
 
 		<interface>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 			<_ />
 			<param />
 			<_ />
@@ -285,8 +277,6 @@
 		<def>				<!-- C/C++ #define macro -->
 			<summary />
 			<_ />
-			<remarks>%user%, %date%</remarks>
-			<_ />
 			<param />
 			<_ />
 			<example _punctuate="false" _optional="true" />
@@ -296,8 +286,6 @@
 
 		<method>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 			<_ />
 			<exception />
 			<_ />
@@ -335,8 +323,6 @@
 		<delegate>
 			<summary />
 			<_ />
-			<remarks>%user%, %date%</remarks>
-			<_ />
 			<exception />
 			<_ />
 			<param />
@@ -349,8 +335,6 @@
 		<constructor>
 			<summary />
 			<_ />
-			<remarks>%user%, %date%</remarks>
-			<_ />
 			<exception />
 			<_ />
 			<param />
@@ -358,8 +342,6 @@
 
 		<destructor>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 			<_ />
 			<exception />
 			<_ />
@@ -369,8 +351,6 @@
 		<finaliser>
 			<summary />
 			<_ />
-			<remarks>%user%, %date%</remarks>
-			<_ />
 			<exception />
 			<_ />
 			<param />
@@ -378,8 +358,6 @@
 
 		<operator>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 			<_ />
 			<exception />
 			<_ />
@@ -390,8 +368,6 @@
 
 		<eventhandler>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 			<_ />
 			<exception />
 			<_ />
@@ -404,8 +380,6 @@
 
 		<eventsender>
 			<summary />
-			<_ />
-			<remarks>%user%, %date%</remarks>
 			<_ />
 			<exception />
 			<_ />
