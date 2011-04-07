@@ -40,7 +40,7 @@
 		by your definition. The type-specific variables (e.g. %retType%) cannot be overridden.
 		-->
 
-		<Variable name="company" ifSet="false" value="Advanced Health and Care Limited" />
+		<Variable name="company" ifSet="false" value="Acme Incorporated" />
 		<Variable name="copyright" ifSet="false" value="Copyright © %year% %company% - All Rights Reserved." />
 		<Variable name="useremail" ifSet="false" value="%user%@%company%" />
 
